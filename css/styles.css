@@ -1,0 +1,562 @@
+/* fuente de google */
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@300;400;500;700&display=swap");
+
+/* Fuentes descargadas en el Sitio */
+@font-face {
+  font-family: "Vintage Handmade";
+  src: url(/fonts/Vintage\ Handmade.ttf);
+}
+
+/* Resetear estilos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 400;
+  list-style: none;
+}
+
+/* Paleta de colores */
+:root {
+  --color-negro: #000000;
+  --color-verde: #006400;
+  --color-gris: #333333;
+  --color-blanco: #ffffff;
+  --color-azul: #87ceeb;
+  --color-marron: #8b4513;
+}
+
+/* Estilos para el logo y nombre */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 2rem;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo-name {
+  font-size: 1.5rem;
+  color: var(--color-blanco);
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Estilos para el navbar */
+.navbar {
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-blanco);
+  margin: 3px 0;
+}
+
+.header-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.header-menu li {
+  margin-right: 20px;
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.header-menu a:hover {
+  color: var(--color-verde);
+}
+
+/* Media Queries Menu */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .header-menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--color-negro);
+    position: absolute;
+    top: 60px;
+    gap: 0.5px;
+    padding: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .header-menu.active {
+    display: flex;
+  }
+
+  .header-menu li {
+    margin-right: 0;
+    text-align: left;
+    width: 100%;
+  }
+}
+/* Fin Estilos para el navbar */
+
+/* Estilos para el carrusel */
+.carousel-caption h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--color-verde); /* Color verde de la paleta */
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-negro); /* Color oscuro de la paleta */
+}
+/* Fin Estilos para el carrusel */
+
+/* Estilos para Nosotros */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  background-color: var(--color-blanco); /* Fondo blanco */
+}
+
+.about-content {
+  grid-column: 1 / span 1;
+  padding: 10px;
+}
+
+.about-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px;
+  margin-bottom: 20px;
+  font-family: "Vintage Handmade";
+}
+
+.about-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--color-gris); /* Texto en gris */
+}
+
+.about-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-negro); /* Fondo negro */
+  color: var(--color-blanco); /* Texto en blanco */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.about-image {
+  grid-column: 2 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-negro); /* Fondo negro */
+  color: var(--color-blanco); /* Texto en blanco */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s; /* Agregar transición al cambio de color */
+}
+
+.about-content .btn:hover {
+  background-color: var(--color-verde); /* Cambio de color en hover */
+  color: var(--color-blanco); /* Mantener el texto en blanco */
+}
+
+/* Media Queries Nosotros */
+@media screen and (max-width: 768px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+  }
+
+  .about-content,
+  .about-image {
+    grid-column: 1 / span 1;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-top: 20px;
+  }
+}
+/* FIN Estilos para la sección "Nosotros" */
+
+/* Estilos para Destinos */
+#titulo-destino {
+  display: flex;
+  background-color: var(--color-gris); /* Fondo gris claro */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-blanco); /* Texto en blanco */
+  padding: 80px;
+  margin-bottom: 20px;
+  font-family: "Vintage Handmade";
+}
+
+.destinos-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+  background-color: var(--color-gris); /* Fondo gris claro */
+}
+
+.destinos-card {
+  background-color: var(--color-blanco); /* Fondo blanco */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.destinos-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.destinos-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--color-negro); /* Texto en negro */
+}
+
+.destinos-card p {
+  font-size: 1rem;
+  color: var(--color-gris); /* Texto en gris */
+}
+
+/* Media Query para 480px */
+@media screen and (max-width: 480px) {
+  .destinos-section {
+    grid-template-columns: 1fr; /* Una columna */
+  }
+}
+
+/* Media Query para 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .destinos-section {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  }
+}
+/* Fin Estilos para Destinos */
+
+/* Estilos para Suscripción */
+.suscripcion-section {
+  background-color: var(--color-marron); /* Fondo oscuro */
+  color: var(--color-blanco); /* Texto en blanco */
+  text-align: center;
+  padding: 80px 0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.suscripcion-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.suscripcion-section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 10px;
+  width: 250px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  background-color: var(--color-negro); /* Fondo verde */
+  color: var(--color-blanco); /* Texto en blanco */
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Agregar transición al cambio de color */
+}
+
+.subscribe-form button:hover {
+  background-color: var(--color-verde); /* Cambio de color en hover */
+}
+
+/* Media Queries Suscripción */
+@media screen and (max-width: 768px) {
+  .subscribe-form {
+    flex-direction: column;
+  }
+
+  .subscribe-form input[type="email"] {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .subscribe-form button {
+    border-radius: 5px;
+  }
+}
+/* Fin Estilos para Suscripción */
+
+/* Estilos para Actividades */
+#titulo-actividades {
+  display: flex;
+  background-color: var(--color-blanco); /* Fondo gris claro */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-negro); /* Texto en blanco */
+  padding: 80px;
+  margin-bottom: 20px;
+  font-family: "Vintage Handmade";
+}
+.actividades-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px 0;
+  background-color: var(--color-gris-claro); /* Fondo gris claro */
+  text-align: center;
+}
+
+.actividad-card {
+  background-color: var(--color-blanco); /* Fondo blanco */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actividad-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.actividad-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--color-negro); /* Texto en negro */
+}
+
+.actividad-card p {
+  font-size: 1rem;
+  color: var(--color-gris); /* Texto en gris */
+}
+
+/* Media Query para 480px */
+@media screen and (max-width: 480px) {
+  .actividades-section {
+    grid-template-columns: 1fr; /* Una columna */
+    padding: 40px 0;
+  }
+
+  .actividad-card {
+    margin-bottom: 20px;
+  }
+}
+
+/* Media Query para 768px */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .actividades-section {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  }
+}
+/* Fin Estilos para Actividades */
+
+/* Estilos para Footer */
+.footer-logo img {
+  max-width: 50px; /* Ajustar el tamaño del logo */
+}
+
+.footer-logo .logo-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.footer-section {
+  background-color: var(--color-negro); /* Fondo oscuro */
+  color: var(--color-blanco); /* Texto en blanco */
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Grilla para el footer utilizando flex */
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Espacio entre elementos */
+}
+
+/* Estilos para el menú principal */
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  display: block;
+  margin-bottom: 5px;
+  transition: color 0.3s ease-in-out; /* Agregar transición de color */
+}
+
+.footer-menu a:hover {
+  color: var(--color-verde); /* Cambiar el color en hover */
+}
+
+/* Estilos para los enlaces de interés */
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--color-blanco);
+  display: block;
+  margin-bottom: 5px;
+  transition: color 0.3s ease-in-out; /* Agregar transición de color */
+}
+
+.footer-links a:hover {
+  color: var(--color-verde); /* Cambiar el color en hover */
+}
+
+/* Estilos para la información de contacto */
+.contact-info {
+  padding: 10px;
+}
+
+.contact-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+/* Estilos para las redes sociales */
+.footer-social a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 5px;
+  transition: color 0.3s ease-in-out; /* Agregar transición de color */
+}
+
+.footer-social a:hover {
+  color: var(--color-verde); /* Cambiar el color en hover */
+}
+
+/* Estilos para el copyrigh */
+.footer-copy p {
+  margin: 10px 0;
+}
+/* Estilos para cada sección */
+.footer-logo,
+.footer-menu,
+.footer-links,
+.contact-info,
+.footer-social,
+.footer-copy {
+  flex: 1; /* Ocupa el mismo ancho */
+  padding: 10px;
+  box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Media Query para 768px */
+@media screen and (max-width: 768px) {
+  .footer-grid {
+    justify-content: flex-start; /* Cambiar a alineación izquierda */
+  }
+
+  /* Ocultar de vista 768px */
+  .contact-info {
+    display: none;
+  }
+  .footer-logo {
+    display: none;
+  }
+
+  /* Media Query para 480px */
+  @media screen and (max-width: 480px) {
+    .footer-grid {
+      flex-direction: column; /* Cambiar a columna */
+    }
+
+    /* Ocultar Menú Principal y Enlaces de Interés */
+    .footer-menu,
+    .footer-links {
+      display: none;
+    }
+  }
+}
+/* Fin Estilos para Footer */

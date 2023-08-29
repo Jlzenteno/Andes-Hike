@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css"> <!-- Link a Hoja Estilos CSS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Link a Fuentes de Google-->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/3b136fc8d7.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" href="../img/Logo Hike Andes.png" type="image/png"> <!-- Icono pagina-->
+        <title>Hike Andes - Viajes de Aventura</title> <!-- Titulo de la Pagina web-->
+    </head>
+<body>
+    <!-- Encabezado de la página -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="/img/Logo Hike Andes.png" alt="Logo Andes Hike">
+            </a>
+        </div>
+        <h1>Hike Andes</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="actividades.html">Actividades</a></li>
+                <li><a href="alojamiento.html">Alojamiento</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+      <!-- Icono de hamburguesa visible solo en tamaños de pantalla pequeños -->
+      <div class="hamburger">&#9776;</div>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Sección de actividades -->
+        <section class="activities-section">
+            <div class="activity">
+                <h2><i class="fa-solid fa-mountain"></i> Alta Montaña</h2>
+                <img src="/img/Actividad 3.jpg" alt="Alta Montaña">
+            </div>
+            <div class="activity">
+                <h2><i class="fas fa-hiking"></i> Excursiones</h2>
+                <img src="/img/Actividad 4.jpg" alt="Excursiones">
+            </div>
+            <div class="activity">
+                <h2><i class="fas fa-campground"></i> Camping</h2>
+                <img src="/img/Actividad 1.jpg" alt="Camping">
+            </div>
+            <div class="activity">
+                <h2><i class="fas fa-snowboarding"></i> Snowboarding</h2>
+                <img src="/img/Actividad 5.jpg" alt="Snowboarding">
+            </div>
+            <div class="activity">
+                <h2><i class="fa-solid fa-person-biking"></i> Ciclismo de Montaña</h2>
+                <img src="/img/Actividad 2.jpg" alt="Ciclismo de Montaña">
+            </div>
+            <div class="activity">
+                <h2><i class="fa-solid fa-parachute-box"></i> Paracaidismo</h2>
+                <img src="/img/Actividad 6.jpg" alt="Paracaidismo">
+            </div>
+        </section>
+    </main>
+
+ <!--______________________________________________________________________________________-->
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-container">
+            <!-- Menú principal del footer -->
+            <div class="footer-menu">
+                <h3>Menú Principal</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="actividades.html">Actividades</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Enlaces de interés -->
+            <div class="footer-links">
+                <h3>Enlaces de Interés</h3>
+                <ul>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Datos de contacto -->
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Correo: contacto@hikeandes.com</p>
+                <p>Teléfono: +123 456 789</p>
+            </div>
+        </div>
+
+        <!-- Copyrigh -->
+        <div class="copyright">
+            <p>Todos los derechos reservados &copy; 2023 Andes Hike</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.querySelector(".hamburger");
+      const menu = document.querySelector(".menu");
+
+      hamburger.addEventListener("click", function () {
+        menu.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>
+</body>
